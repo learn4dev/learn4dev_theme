@@ -3,6 +3,20 @@
 html {
     overflow: -moz-scrollbars-vertical; 
     overflow-y: scroll;
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 350px;
+    padding-top:160px;
+}
+
+h3{
+    text-transform: uppercase;
+    color:#1C98B6;
+    font-weight: bold;
+    height:50px;
 }
 #top-menu-fixed{
     display: block;
@@ -75,4 +89,49 @@ html {
 
 #topbar-first .btn-group > a{
     background-color:#0091B5; 
+}
+
+.crumb{
+    margin-top:-80px;
+    width:100%;
+    height:300px;
+}
+
+.crumb > img{
+    max-height:100%;
+    width:100%;
+    background: rgba(45, 62, 80, 0.8) none repeat scroll 0 0;
+}
+
+.footer {
+    border-top:10vh;
+    border-bottom:10vh;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    min-height: 250px;
+    background-color: #484a4c;
+    color:white;
+}
+
+.footer h3{
+    color:white;
+    padding-left:5px;
+}
+.social-img{
+    width: 50px;
+    height: 50px;
+}
+
+#static{
+    color:black;
+}
+
+#contactform{
+    margin-top:-30px;
+}
+
+.submit{
+    background-color:#AEC929;
 }

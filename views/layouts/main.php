@@ -2,17 +2,13 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use humhub\libs\LogoImage;
 use yii\helpers\Html;
-use humhub\modules\gallery\models\BaseGallery as Gallery;
-use humhub\modules\gallery\models\Media;
 
 \humhub\assets\AppAsset::register($this);
-
-
-//$this->theme->publishResources();
-
 $logo = $this->theme->getBaseUrl() . '/img/logo.png';
+$youtubeLogo = $this->theme->getBaseUrl() . '/img/youtube.png';
+$twitterLogo = $this->theme->getBaseUrl() . '/img/twitter.png';
+$linkedinLogo = $this->theme->getBaseUrl() . '/img/linkedin.png';
 ?>
 <?php
 $this->beginPage();
@@ -53,7 +49,6 @@ $this->beginPage();
 
                                 <?php } ?>
                                 <ul class="nav pull-right" id="search-menu-nav">
-
                                     <?= Yii::$app->user->isGuest ? \humhub\modules\user\widgets\AccountTopMenu::widget() : ''; ?> 
                                     <?= \humhub\widgets\TopMenuRightStack::widget() ?>
                                 </ul>
@@ -79,31 +74,70 @@ $this->beginPage();
 
         <footer class="footer">
             <div class="container">
-                <div class="col-md-3">
-                    The network for a great experience as a development practitioner.
+                <h3>Get in Touch</h3>
+                <div class="col-md-2" style="padding-left:0">
+
+                    <a href="https://www.youtube.com/channel/UC49bQph1vAOUr5AxAVAQ0Lw">
+                        <img class="social-img" src="<?= $youtubeLogo; ?>" alt="<?= Yii::t('base', 'Logo of {appName}', ['appName' => Html::encode(Yii::$app->name)]) ?>" id="img-logo"/>
+                    </a>
+                    <a href="https://twitter.com/learn4d">
+                        <img class="social-img" src="<?= $twitterLogo; ?>" alt="<?= Yii::t('base', 'Logo of {appName}', ['appName' => Html::encode(Yii::$app->name)]) ?>" id="img-logo"/>
+                    </a>
+                    <a href="https://www.linkedin.com/company/learn4dev">
+                        <img class="social-img" src="<?= $linkedinLogo; ?>" alt="<?= Yii::t('base', 'Logo of {appName}', ['appName' => Html::encode(Yii::$app->name)]) ?>" id="img-logo"/>
+                    </a>
                 </div>
 
-                <div class="col-md-3">
-                    <h3>Get in Touch</h3>
-                    <p>
-                        <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> +32 (05) 2 505 37 85
-                    </p>
-                    <p>
-                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> 
-                    </p>
-                    <p>
-                        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
-                    </p>
-                </div>
+
 
                 <div class="col-md-3">
-                    <h3>Useful Resources</h3>
+                    <div id="contacts">
+                        <p>
+                            <b>Veronique MEYERS</b>
+
+                        </p>
+                        <p> 
+                            <b>Nathalia ZIEMBLEWICZ</b>
+                        </p>
+
+                        <p> 
+                            <b>Dung VU TIEN</b>
+                        </p>
+                    </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-7">
+                    <div class="container">
+                        <form id ="contactform">
+                            <div class="col-md-3 form-line">
+                                <div class="form-group">
+                                    <label for="exampleInputUsername">Your name</label>
+                                    <input type="text" class="form-control" id="" placeholder=" Enter Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail">Email Address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail" placeholder=" Enter Email id">
+                                </div>	
+                                <div class="form-group">
+                                    <label for="telephone">Occupation</label>
+                                    <input type="tel" class="form-control" id="telephone" placeholder=" Your affiliation with the project">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for ="description"> Message</label>
+                                    <textarea  rows="5" class="form-control" id="description" placeholder="Enter Your Message"></textarea>
+                                </div>
+                                <div>
+
+                                    <button type="button" class="btn btn-primary submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
 
                 </div>
-
             </div>
         </footer>
 
