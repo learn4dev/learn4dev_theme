@@ -6,9 +6,9 @@ use yii\helpers\Html;
 
 \humhub\assets\AppAsset::register($this);
 $logo = $this->theme->getBaseUrl() . '/img/logo.png';
-$youtubeLogo = $this->theme->getBaseUrl() . '/img/youtube.png';
-$twitterLogo = $this->theme->getBaseUrl() . '/img/twitter.png';
-$linkedinLogo = $this->theme->getBaseUrl() . '/img/linkedin.png';
+$youtubeLogo = $this->theme->getBaseUrl() . '/img/social/youtube.png';
+$twitterLogo = $this->theme->getBaseUrl() . '/img/social/twitter.png';
+$linkedinLogo = $this->theme->getBaseUrl() . '/img/social/linkedin.png';
 ?>
 <?php
 $this->beginPage();
@@ -43,14 +43,18 @@ $this->beginPage();
                                 </div>
 
                                 <?php if (!Yii::$app->user->isGuest) { ?>
+
                                     <div class="nav topbar-actions pull-right">
                                         <?= \humhub\modules\user\widgets\AccountTopMenu::widget(); ?>
                                     </div>
 
+
                                 <?php } ?>
+
                                 <ul class="nav pull-right" id="search-menu-nav">
-                                    <?= Yii::$app->user->isGuest ? \humhub\modules\user\widgets\AccountTopMenu::widget() : ''; ?> 
                                     <?= \humhub\widgets\TopMenuRightStack::widget() ?>
+                                    <?= Yii::$app->user->isGuest ? \humhub\modules\user\widgets\AccountTopMenu::widget() : ''; ?> 
+
                                 </ul>
                             </div>
                         </div>
@@ -63,6 +67,7 @@ $this->beginPage();
                                 <ul class="nav pull-right" id="top-menu-nav">
                                     <!-- load navigation from widget -->
                                     <?= \humhub\widgets\TopMenu::widget(); ?>
+
                                 </ul>
                             </div>
                         </div>
@@ -70,6 +75,7 @@ $this->beginPage();
                 </div>
             </div>
         </div>
+
         <?= $content; ?>
 
         <footer class="footer">
