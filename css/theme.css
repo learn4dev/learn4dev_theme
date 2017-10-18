@@ -148,9 +148,7 @@ h3{
     padding-bottom:50px;
 }
 
-#contactform{
-    margin-top:-30px;
-}
+
 
 .submit{
     background-color:#AEC929;
@@ -189,4 +187,12 @@ h4{
     margin-bottom:25px;
 
 
+}
+
+
+footer ul{
+    list-style: none;
+}
+footer a{
+    color:white;
 }

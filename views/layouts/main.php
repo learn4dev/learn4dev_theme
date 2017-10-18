@@ -80,9 +80,9 @@ $this->beginPage();
 
         <footer class="footer">
             <div class="container">
-                <h3>Get in Touch</h3>
-                <div class="col-md-2" style="padding-left:0">
 
+                <div class="col-md-2" style="padding-left:0">
+                    <h3>Follow Us</h3>
                     <a href="https://www.youtube.com/channel/UC49bQph1vAOUr5AxAVAQ0Lw">
                         <img class="social-img" src="<?= $youtubeLogo; ?>" alt="<?= Yii::t('base', 'Logo of {appName}', ['appName' => Html::encode(Yii::$app->name)]) ?>" id="img-logo"/>
                     </a>
@@ -95,25 +95,16 @@ $this->beginPage();
                 </div>
 
 
-
                 <div class="col-md-3">
-                    <div id="contacts">
-                        <p>
-                            <b>Veronique MEYERS</b>
-
-                        </p>
-                        <p> 
-                            <b>Nathalia ZIEMBLEWICZ</b>
-                        </p>
-
-                        <p> 
-                            <b>Dung VU TIEN</b>
-                        </p>
-                    </div>
+                    <h3>Legal Notice</h3>  
+                    <ul>                   
+                        <li><?= Html::a('Terms and Conditions', ['/public/legal/terms-and-conditions']) ?></li>
+                        <li><?= Html::a('Cookies', ['/public/legal/cookies']) ?></li>
+                    </ul> 
                 </div>
-
                 <div class="col-md-7">
                     <div class="container">
+                        <h3>Send us an e-mail</h3>  
                         <form id ="contactform">
                             <div class="col-md-3 form-line">
                                 <div class="form-group">
@@ -144,7 +135,10 @@ $this->beginPage();
                     </div>
 
                 </div>
+
             </div>
+
+
         </footer>
 
         <?php $this->endBody() ?>
