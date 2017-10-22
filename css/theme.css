@@ -16,7 +16,9 @@ h3{
     text-transform: uppercase;
     color:#1C98B6;
     font-weight: bold;
-    height:50px;
+    margin-top: 50px;
+    margin-bottom:20px;
+
 }
 #top-menu-fixed{
     display: block;
@@ -142,7 +144,7 @@ h3{
     height: 50px;
 }
 
-#static{
+.static{
     background-color: white;
     color:black;
     padding-bottom:50px;
@@ -172,23 +174,29 @@ h4{
     } 
 
 }
-
-
-
-#history-video{
-    margin-top:50px;
+h5{
+    font-size:1.4em;
     text-align: center;
-
 }
 
-#history-video-text{
-    margin-top:100px;
-    text-align: center;
-    margin-bottom:25px;
-
-
+.thumbnail{
+    height: 100%;
 }
 
+.thumbnail-gallery{
+    margin-top:25px;
+}
+
+.thumbnail-gallery .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom:20px;
+}
+
+.thumb-description{
+    text-align: justify;
+    margin:10px;
+}
 
 footer ul{
     list-style: none;

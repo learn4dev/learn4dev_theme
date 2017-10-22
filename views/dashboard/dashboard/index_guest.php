@@ -22,11 +22,7 @@ $splash = $this->theme->getBaseUrl() . '/img/splash.jpg';
             <?php
             echo \humhub\modules\dashboard\widgets\Sidebar::widget([
                 'widgets' => [
-                    [
-                        \humhub\modules\directory\widgets\NewMembers::className(),
-                        ['showMoreButton' => true],
-                        ['sortOrder' => 300]
-                    ],
+    
                     [
                         \humhub\modules\directory\widgets\NewSpaces::className(),
                         ['showMoreButton' => true],
