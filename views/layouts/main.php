@@ -52,7 +52,7 @@ $this->beginPage();
                                 <?php } ?>
 
                                 <ul class="nav pull-right" id="search-menu-nav">
-                                    <?= \humhub\widgets\TopMenuRightStack::widget() ?>
+                                    <?= !Yii::$app->user->isGuest ? \humhub\widgets\TopMenuRightStack::widget() : '' ?>
                                     <?= Yii::$app->user->isGuest ? \humhub\modules\user\widgets\AccountTopMenu::widget() : ''; ?> 
 
                                 </ul>

@@ -4,13 +4,14 @@ use \yii\helpers\Html;
 use \yii\helpers\Url;
 ?>
 <?php if (Yii::$app->user->isGuest): ?>
-<li>
-    <a href="#" id="log-in" class="dropdown-toggle"  data-action-click="ui.modal.load" data-action-url="<?= Url::toRoute('/user/auth/login'); ?>">
-        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> 
-    </a>
-</li>
+
+    <div class="btn-group" style="margin: 7px 2px;">
+        <a href="<?= Url::toRoute('/search/search'); ?>"  class="btn btn-default" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+        <a href="#"  class="btn btn-primary" role="button" data-action-click="ui.modal.load" data-action-url="<?= Url::toRoute('/user/auth/login'); ?>"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></a>
+    </div>
+
 <?php else: ?>
-    <ul class="nav">
+    <ul class="nav" >
         <li class="dropdown account">
             <a href="#" id="account-dropdown-link" class="dropdown-toggle" data-toggle="dropdown" aria-label="<?= Yii::t('base', 'Profile dropdown') ?>">
 

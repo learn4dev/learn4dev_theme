@@ -39,7 +39,15 @@ h5{
     text-align: center;
 }
 
+.btn-default{
+    background-color: #AEC929;
+    color:white !important;
+}
 
+.btn-primary{
+    background-color:#0091B5;
+    color:white !important;
+}
 
 .topbar{
     position: inherit;
@@ -116,8 +124,13 @@ h5{
 
 }
 
-#topbar-first .btn-group > a{
-    background-color:#0091B5; 
+
+#topbar-first .btn-group > .btn-primary{
+    background-color:#0091B5;
+}
+
+#topbar-first .btn-group > .btn-default{
+    background-color:#AEC929; 
 }
 #topbar-first .nav > .account{
     margin-left:0px;
