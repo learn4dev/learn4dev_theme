@@ -132,10 +132,6 @@ h5{
     color:white;
 }
 
-#crumb-bg{
-  
-    
-}
 
 .crumb{
 
@@ -154,7 +150,7 @@ h5{
 
 /* Centered text */
 .centered {
-    font-size: 3em;
+    font-size: 2em;
     text-transform: uppercase;
     font-weight: bolder;
     position: absolute;
