@@ -76,6 +76,7 @@ $this->beginPage();
             </div>
         </div>
 
+
         <?= $content; ?>
 
         <footer class="footer">
