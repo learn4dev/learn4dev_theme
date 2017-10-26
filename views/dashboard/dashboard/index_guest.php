@@ -22,7 +22,7 @@ $splash = $this->theme->getBaseUrl() . '/img/splash.jpg';
             <?php
             echo \humhub\modules\dashboard\widgets\Sidebar::widget([
                 'widgets' => [
-                    
+
                     [
                         \humhub\modules\learn4dev\widgets\LearnSpaces::className(),
                         ['showMoreButton' => true],
@@ -30,6 +30,7 @@ $splash = $this->theme->getBaseUrl() . '/img/splash.jpg';
                     ],
                     [
                         \humhub\modules\learn4dev\widgets\ExpertSpaces::className(),
+                        ['aside' => true],
                         ['showMoreButton' => true],
                         ['sortOrder' => 400]
                     ],
