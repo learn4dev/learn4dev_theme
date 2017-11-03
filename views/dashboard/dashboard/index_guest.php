@@ -9,8 +9,15 @@
 <?php
 $splash = $this->theme->getBaseUrl() . '/img/splash.jpg';
 ?>
-<div class="img-responsive" style="margin-top:-20px;">
+<div class="img-responsive" id="splash">
+    <h3>Welcome to<br> learn4dev<br><span>Your gateway for learning opportunities in the development sector.  </span></h3>
+
+
     <?= \yii\helpers\Html::img($splash) ?>
+
+    <div id="splash-bg">
+
+    </div>
 </div>
 
 <div class="container">

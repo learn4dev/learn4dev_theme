@@ -34,7 +34,7 @@ h4{
     font-size:25px;
 }
 
-h5{
+.thumbnail h5{
     font-size:1.4em;
     text-align: center;
 }
@@ -158,7 +158,6 @@ h5{
     float: left;
     background: #484a4c;
 
-
 }
 
 /* Centered text */
@@ -264,4 +263,47 @@ footer a{
 
 #profiles  a{
     color:#0091B5;
+}
+/* Splash on guest entry */
+#splash{
+    margin-top: -5%;
+    position: relative;   
+
+}
+
+#splash-bg {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width:70%;
+    padding: 20px;
+    height:94%;
+    opacity: .55;
+    border-bottom: 750px solid #0091B5;
+    border-left: 200px solid transparent;
+
+}
+
+
+#splash h3 {
+    text-align: center;
+    width:35%;
+    text-transform: none;
+    font-family: serif;
+    font-weight: bolder;
+    position:absolute;
+    top:30%;
+    right:20%;
+    color:white;
+    font-size: 4em;
+    z-index:500;
+    text-shadow: 1.5px 1.5px black;
+
+
+}
+
+#splash h3 span{
+    text-align:left;
+    font-family: sans;
+    font-size: 16px;
 }
