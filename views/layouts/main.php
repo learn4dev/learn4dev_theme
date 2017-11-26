@@ -78,69 +78,69 @@ $this->beginPage();
 
 
         <?= $content; ?>
+        <?php if (Yii::$app->user->isGuest) { ?>
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-6 col-md-2" style="padding-left:0">
+                            <h3>Follow Us</h3>
+                            <a href="https://www.youtube.com/channel/UC49bQph1vAOUr5AxAVAQ0Lw">
+                                <img class="social-img" src="<?= $youtubeLogo; ?>" alt="<?= Yii::t('base', 'Logo of {appName}', ['appName' => Html::encode(Yii::$app->name)]) ?>" id="img-logo"/>
+                            </a>
+                            <a href="https://twitter.com/learn4d">
+                                <img class="social-img" src="<?= $twitterLogo; ?>" alt="<?= Yii::t('base', 'Logo of {appName}', ['appName' => Html::encode(Yii::$app->name)]) ?>" id="img-logo"/>
+                            </a>
+                            <a href="https://www.linkedin.com/company/learn4dev">
+                                <img class="social-img" src="<?= $linkedinLogo; ?>" alt="<?= Yii::t('base', 'Logo of {appName}', ['appName' => Html::encode(Yii::$app->name)]) ?>" id="img-logo"/>
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-md-2">
+                            <h3>Legal Notice</h3>  
+                            <ul style="margin-bottom: 50px;">                   
+                                <li><?= Html::a('Terms and Conditions', ['/public/legal/terms-and-conditions']) ?></li>
+                                <li><?= Html::a('Cookies', ['/public/legal/cookies']) ?></li>
+                            </ul> 
+                        </div>
+                        <div class="col-xs-hidden col-md-8">
+                            <div class="container">
+                                <h3>Send us an e-mail</h3>  
+                                <form id ="contactform">
+                                    <div class="col-md-3 form-line">
+                                        <div class="form-group">
+                                            <label for="exampleInputUsername">Your name</label>
+                                            <input type="text" class="form-control" id="" placeholder=" Enter Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail">Email Address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail" placeholder=" Enter Email id">
+                                        </div>	
+                                        <div class="form-group">
+                                            <label for="telephone">Occupation</label>
+                                            <input type="tel" class="form-control" id="telephone" placeholder=" Your affiliation with the project">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for ="description"> Message</label>
+                                            <textarea  rows="5" class="form-control" id="description" placeholder="Enter Your Message"></textarea>
+                                        </div>
+                                        <div>
 
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-6 col-md-2" style="padding-left:0">
-                        <h3>Follow Us</h3>
-                        <a href="https://www.youtube.com/channel/UC49bQph1vAOUr5AxAVAQ0Lw">
-                            <img class="social-img" src="<?= $youtubeLogo; ?>" alt="<?= Yii::t('base', 'Logo of {appName}', ['appName' => Html::encode(Yii::$app->name)]) ?>" id="img-logo"/>
-                        </a>
-                        <a href="https://twitter.com/learn4d">
-                            <img class="social-img" src="<?= $twitterLogo; ?>" alt="<?= Yii::t('base', 'Logo of {appName}', ['appName' => Html::encode(Yii::$app->name)]) ?>" id="img-logo"/>
-                        </a>
-                        <a href="https://www.linkedin.com/company/learn4dev">
-                            <img class="social-img" src="<?= $linkedinLogo; ?>" alt="<?= Yii::t('base', 'Logo of {appName}', ['appName' => Html::encode(Yii::$app->name)]) ?>" id="img-logo"/>
-                        </a>
-                    </div>
-                    <div class="col-xs-6 col-md-2">
-                        <h3>Legal Notice</h3>  
-                        <ul style="margin-bottom: 50px;">                   
-                            <li><?= Html::a('Terms and Conditions', ['/public/legal/terms-and-conditions']) ?></li>
-                            <li><?= Html::a('Cookies', ['/public/legal/cookies']) ?></li>
-                        </ul> 
-                    </div>
-                    <div class="col-xs-hidden col-md-8">
-                        <div class="container">
-                            <h3>Send us an e-mail</h3>  
-                            <form id ="contactform">
-                                <div class="col-md-3 form-line">
-                                    <div class="form-group">
-                                        <label for="exampleInputUsername">Your name</label>
-                                        <input type="text" class="form-control" id="" placeholder=" Enter Name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail">Email Address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail" placeholder=" Enter Email id">
-                                    </div>	
-                                    <div class="form-group">
-                                        <label for="telephone">Occupation</label>
-                                        <input type="tel" class="form-control" id="telephone" placeholder=" Your affiliation with the project">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for ="description"> Message</label>
-                                        <textarea  rows="5" class="form-control" id="description" placeholder="Enter Your Message"></textarea>
-                                    </div>
-                                    <div>
+                                            <button type="button" class="btn btn-primary submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message</button>
+                                        </div>
 
-                                        <button type="button" class="btn btn-primary submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message</button>
                                     </div>
+                                </form>
+                            </div>
 
-                                </div>
-                            </form>
                         </div>
 
                     </div>
 
                 </div>
-
-            </div>
-        </footer>
-
-        <?php $this->endBody() ?>
-    </body>
-</html>
-<?php $this->endPage() ?>
+            </footer>
+            <?php } ?>
+            <?php $this->endBody() ?>
+        </body>
+    </html>
+    <?php $this->endPage() ?>
