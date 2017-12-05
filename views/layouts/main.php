@@ -3,6 +3,7 @@
 /* @var $content string */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 \humhub\assets\AppAsset::register($this);
 $logo = $this->theme->getBaseUrl() . '/img/logo.png';
@@ -50,9 +51,9 @@ $this->beginPage();
 
 
                                 <?php } ?>
-
-                                <ul class="nav pull-right" id="search-menu-nav">
-                                    <?= !Yii::$app->user->isGuest ? \humhub\widgets\TopMenuRightStack::widget() : '' ?>
+               
+                                <ul class="nav pull-right">
+                                    
                                     <?= Yii::$app->user->isGuest ? \humhub\modules\user\widgets\AccountTopMenu::widget() : ''; ?> 
 
                                 </ul>
@@ -139,8 +140,8 @@ $this->beginPage();
 
                 </div>
             </footer>
-            <?php } ?>
-            <?php $this->endBody() ?>
-        </body>
-    </html>
-    <?php $this->endPage() ?>
+        <?php } ?>
+        <?php $this->endBody() ?>
+    </body>
+</html>
+<?php $this->endPage() ?>

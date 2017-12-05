@@ -139,11 +139,6 @@ h4{
 #log-in{
     background-color:#0091B5;
 }
-#search-menu{
-
-    background-color:#AEC929;
-    color:white;
-}
 
 
 .crumb{
@@ -306,4 +301,10 @@ footer a{
     text-align:left;
     font-family: sans;
     font-size: 16px;
+}
+
+#search-button{
+
+    background-color:#AEC929;
+    color:white;
 }

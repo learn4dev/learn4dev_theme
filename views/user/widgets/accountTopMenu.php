@@ -12,6 +12,12 @@ use \yii\helpers\Url;
 
 <?php else: ?>
     <ul class="nav" >
+        <?php if (!Yii::$app->user->isGuest) { ?>
+            <li>
+                    <a href="<?= Url::toRoute('/search/search'); ?>" id="search-button" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+               
+            </li>
+        <?php } ?>
         <li class="dropdown account">
             <a href="#" id="account-dropdown-link" class="dropdown-toggle" data-toggle="dropdown" aria-label="<?= Yii::t('base', 'Profile dropdown') ?>">
 
@@ -42,5 +48,7 @@ use \yii\helpers\Url;
                 <?php endforeach; ?>
             </ul>
         </li>
+
+
     </ul>
 <?php endif; ?>
