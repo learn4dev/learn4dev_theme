@@ -27,7 +27,7 @@ $splash = $this->theme->getBaseUrl() . '/img/splash.jpg';
         </div>
         <div class="col-md-4 layout-sidebar-container">
             <?php
-            echo \humhub\modules\calendar\widgets\UpcomingEvents::widget();
+            echo \humhub\modules\calendar\widgets\UpcomingEvents::widget(['daysInFuture' => 1000]);
             echo \humhub\modules\dashboard\widgets\Sidebar::widget([
                 'widgets' => [
 
